@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Student from './Student.js';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -7,6 +8,12 @@ import Button from '@mui/material/Button';
 import Radio from '@mui/material/Radio';
 import {DataGrid} from '@mui/x-data-grid';
 import {SEMESTER_LIST} from '../constants.js'
+import { toHaveDisplayValue } from '@testing-library/jest-dom/dist/matchers';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
 
 // user selects from a list of  (year, semester) values
 class Semester extends Component {
@@ -19,7 +26,19 @@ class Semester extends Component {
     console.log("Semester.onRadioClick "+JSON.stringify(event.target.value));
     this.setState({selected: event.target.value});
   }
-  
+
+  handleClickOpen = () => {
+    this.setState( {open:true} );
+  }
+
+  handleClose = () => {
+    this.setState( {open:false} );
+  }
+
+  handleChange = () => {
+    this.setState({});
+  }
+
   render() {    
       const icolumns = [
       {
@@ -62,6 +81,7 @@ class Semester extends Component {
                 variant="outlined" color="primary" style={{margin: 10}}>
                 Get Schedule
               </Button>
+              <Student></Student>
           </div>
       </div>
     )
