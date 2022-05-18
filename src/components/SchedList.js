@@ -10,6 +10,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import AddCourse from './AddCourse';
+import AddStudent from './AddStudent.js';
+import Student from './Student.js';
 
 // NOTE:  for OAuth security, http request must have
 //   credentials: 'include' 
