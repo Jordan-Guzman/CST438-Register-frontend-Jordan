@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Student from './Student.js';
 import AddStudent from './AddStudent.js';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
