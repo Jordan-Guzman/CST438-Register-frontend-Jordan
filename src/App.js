@@ -19,7 +19,8 @@ function App() {
       </AppBar>
       <BrowserRouter>
        <Switch>
-        <Route exact path='/' component={Semester} />
+        <Route exact path='/' component={Login} />
+        <Route exact path='/semester' component={Semester} />
         <Route path='/schedule' component={SchedList} />
         <Route path='/student' component={AddStudent} />
        </Switch>
