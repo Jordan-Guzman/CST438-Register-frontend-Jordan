@@ -49,7 +49,8 @@ class Semester extends Component {
       { 
         method: 'POST', 
         headers: { 'Content-Type': 'application/json',
-                   'X-XSRF-TOKEN': token  }, 
+                   'X-XSRF-TOKEN': token  },
+          credentials: 'include', 
         body: JSON.stringify(student)
       })
     .then(res => {
