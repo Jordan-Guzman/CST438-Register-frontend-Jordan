@@ -45,7 +45,7 @@ class Semester extends Component {
   addStudent = (student) => {
     const token = Cookies.get('XSRF-TOKEN');
  
-    fetch(`${SERVER_URL}/student`,
+    fetch(`${SERVER_URL}student`,
       { 
         method: 'POST', 
         headers: { 'Content-Type': 'application/json',
