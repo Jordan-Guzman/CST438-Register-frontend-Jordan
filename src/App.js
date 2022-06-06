@@ -6,6 +6,7 @@ import SchedList from './components/SchedList';
 import Semester from './components/Semester';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import AddStudent from './components/AddStudent';
+import Login from './components/Login';
 
 function App() {
   return (
